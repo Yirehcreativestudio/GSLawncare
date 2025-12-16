@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="GS Lawn Services provides professional lawn care, landscaping design, mulch installation, and yard cleanup services. Get a free estimate today! Call (317) 363-3145">
+    <meta property="og:title" content="GS Lawn Services - Professional Lawn Care & Landscaping">
+    <meta property="og:description"
+        content="Reliable lawn mowing, landscaping, and yard maintenance services. Free estimates available. Call (317) 363-3145">
+    <meta property="og:type" content="website">
+    <title>GS Lawn Services - Professional Lawn Care & Landscaping | Call (317) 363-3145</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "GS Lawn Services",
+      "description": "Professional lawn care and landscaping services",
+      "telephone": "+13173633145",
+      "email": "info@gslawnservices.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "postalCode": "46201"
+      },
+      "openingHours": "Mo-Fr 08:00-18:00, Sa 09:00-15:00"
+    }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-green: #2d5016;
+            --accent-green: #4a7c2c;
+            --light-green: #7fb069;
+            --cream: #f4f1e8;
+            --dark-gray: #2c2c2c;
+            --light-gray: #f8f8f8;
+            --white: #ffffff;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+        }
+
+        .top-bar {
+            background: var(--primary-green);
+            color: var(--white);
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        .top-bar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .top-bar-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .top-bar-item a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-green);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-green);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: var(--primary-green);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, rgba(45, 80, 22, 0.85), rgba(74, 124, 44, 0.75)),
+                url('https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--white);
+            padding: 120px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.2);
+            z-index: 0;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 25px;
+            animation: fadeInUp 0.8s ease;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 35px;
+            animation: fadeInUp 0.8s ease 0.2s both;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+
+        .btn {
+            padding: 16px 40px;
+            font-size: 17px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--light-green);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-green);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary-green);
+        }
+
+        .btn-secondary:hover {
+            background: var(--cream);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        section {
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 38px;
+            color: var(--primary-green);
+            margin-bottom: 50px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 25px;
+        }
+
+        .service-card h3 {
+            color: var(--primary-green);
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .why-choose {
+            background: var(--light-gray);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .benefit-item {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+            background: var(--white);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .benefit-icon {
+            font-size: 36px;
+            color: var(--accent-green);
+            flex-shrink: 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            aspect-ratio: 4/3;
+            background: var(--light-gray);
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(45, 80, 22, 0.9);
+            color: var(--white);
+            padding: 12px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .testimonials {
+            background: var(--cream);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--primary-green);
+        }
+
+        .service-areas {
+            background: var(--light-gray);
+        }
+
+        .areas-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            list-style: none;
+        }
+
+        .areas-list li {
+            padding: 15px;
+            background: var(--white);
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            font-weight: 500;
+        }
+
+        .about {
+            background: var(--cream);
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 15px;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 20px;
+            background: var(--white);
+            border: none;
+            text-align: left;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--primary-green);
+        }
+
+        .faq-question:hover {
+            background: var(--light-gray);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 20px;
+        }
+
+        .faq-answer.active {
+            max-height: 500px;
+            padding: 20px;
+        }
+
+        .contact {
+            background: var(--light-gray);
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: var(--primary-green);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .success-message {
+            display: none;
+            background: var(--light-green);
+            color: var(--white);
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        .map-placeholder {
+            background: var(--white);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 450px;
+            color: #666;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background: var(--primary-green);
+            color: var(--white);
+            padding: 50px 20px 20px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+        }
+
+        .footer-logo {
+            height: 40px;
+            width: auto;
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--light-green);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            color: var(--white);
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: var(--light-green);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .floating-call-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--accent-green);
+            color: var(--white);
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            z-index: 999;
+            display: none;
+            animation: pulse 2s infinite;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal.show {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 100%;
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            color: var(--dark-gray);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero {
+                padding: 80px 20px;
+                background-attachment: scroll;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .floating-call-btn {
+                display: block;
+            }
+
+            .top-bar-content {
+                font-size: 12px;
+                justify-content: center;
+            }
+
+            .logo-img {
+                height: 40px;
+            }
+
+            .logo-text {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div class="top-bar-item">
+                <span>📞</span>
+                <a href="tel:+13173633145">(317) 363-3145</a>
+            </div>
+            <div class="top-bar-item">
+                <span>📍</span>
+                <span>Serving Greater Indianapolis Area</span>
+            </div>
+            <div class="top-bar-item">
+                <span>🕒</span>
+                <span>Mon-Fri: 8AM-6PM | Sat: 9AM-3PM</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#" class="logo-container">
+                <img src="https://drive.google.com/uc?export=view&id=1KYxVNNVMTzgjvlhjdl0TU3XnYSugbZ_i"
+                    alt="GS Lawn Services Logo" class="logo-img">
+                <span class="logo-text">GS Lawn Services</span>
+            </a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why-choose">Why Us</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <!-- HERO BACKGROUND: Current image from Unsplash. Replace with your own by changing the URL in the CSS .hero background property -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Transform Your Outdoor Space Into a Beautiful Oasis</h1>
+            <p>Professional lawn care and landscaping services you can trust. Quality results, fair pricing, and free
+                estimates.</p>
+            <div class="cta-buttons">
+                <a href="tel:+13173633145" class="btn btn-primary">Call Now: (317) 363-3145</a>
+                <button class="btn btn-secondary quote-btn">Get a Free Quote</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">Our Professional Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <!-- SERVICE IMAGE: Replace with your own image -->
+                    <img src="lawn-mowing.png" alt="Lawn Mowing Service" class="service-image">
+                    <div class="service-content">
+                        <h3>Lawn Mowing</h3>
+                        <p>Regular, reliable lawn mowing services to keep your grass healthy and perfectly manicured. We
+                            edge, trim, and clean up every time.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <!-- SERVICE IMAGE: Replace with your own image -->
+                    <img src="https://www.maramani.com/cdn/shop/articles/shutterstock_3122138.jpg?v=1694410302&width=1000"
+                        alt="Landscaping Design Service" class="service-image">
+                    <div class="service-content">
+                        <h3>Landscaping Design</h3>
+                        <p>Custom landscape design and installation to enhance your property's curb appeal and create
+                            the outdoor space of your dreams.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <!-- SERVICE IMAGE: Replace with your own image -->
+                    <img src="https://www.topchoiceaustin.com/wp-content/uploads/WhatsApp-Image-2023-04-19-at-2.53.17-PM-1-720x540.jpeg"
+                        alt="Mulch Installation Service" class="service-image">
+                    <div class="service-content">
+                        <h3>Mulch & Rock Installation</h3>
+                        <p>Professional mulch and decorative rock installation to beautify your flower beds, retain
+                            moisture, and prevent weed growth.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <!-- SERVICE IMAGE: Replace with your own image -->
+                    <img src="https://images.ctfassets.net/vwt5n1ljn95x/TZWxHeSCgplLaNrpzc9uX/5c094fcda4053b1fc19f20ededaa9814/Branch_Hedge_Trimming.jpeg?w=640&q=75&fm=webp"
+                        alt="Tree Trimming Service" class="service-image">
+                    <div class="service-content">
+                        <h3>Bush & Tree Trimming</h3>
+                        <p>Expert pruning and trimming services to maintain healthy plants, improve aesthetics, and
+                            ensure safety around your property.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <!-- SERVICE IMAGE: Replace with your own image -->
+                    <img src="https://ambrosiolandscapes.com/wp-content/uploads/2021/09/9.29-4.jpg"
+                        alt="Leaf Cleanup Service" class="service-image">
+                    <div class="service-content">
+                        <h3>Leaf Cleanup</h3>
+                        <p>Thorough fall and spring leaf removal services to keep your yard clean and prevent lawn
+                            damage from decomposing leaves.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <!-- SERVICE IMAGE: Replace with your own image -->
+                    <img src="https://static.wixstatic.com/media/6eeb90_6f60487531f74ed194772b1da7319403~mv2.jpg/v1/fill/w_358,h_421,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/generate%20an%20image%20for%20fall%20and%20winter%20in%20different%20places_%20Make%20it%20in%20a%20residential%20place_.jpg"
+                        alt="Seasonal Cleanup Service" class="service-image">
+                    <div class="service-content">
+                        <h3>Seasonal Cleanup</h3>
+                        <p>Complete spring and fall cleanup services including debris removal, bed preparation, and yard
+                            refreshing for every season. Winter snow removal to keep your property safe and accessible.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-choose" class="why-choose">
+        <div class="container">
+            <h2 class="section-title">Why Choose GS Lawn Services?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">✓</div>
+                    <div>
+                        <h3>Reliable & Punctual</h3>
+                        <p>We show up on time, every time. Count on consistent, dependable service you can trust.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">✓</div>
+                    <div>
+                        <h3>Quality Workmanship</h3>
+                        <p>Professional results with attention to detail. Your satisfaction is our top priority.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">✓</div>
+                    <div>
+                        <h3>Fair Pricing</h3>
+                        <p>Competitive rates with no hidden fees. Get premium service without breaking the bank.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">✓</div>
+                    <div>
+                        <h3>Free Estimates</h3>
+                        <p>No-obligation quotes for all services. Know exactly what to expect before we start.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">✓</div>
+                    <div>
+                        <h3>Experienced Team</h3>
+                        <p>Skilled professionals with years of lawn care and landscaping expertise.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">✓</div>
+                    <div>
+                        <h3>Customer Focused</h3>
+                        <p>Friendly service and clear communication. We treat your property like our own.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery">
+        <div class="container">
+            <h2 class="section-title">Our Work Gallery</h2>
+            <div class="gallery-grid">
+                <!-- GALLERY IMAGES: Replace these Unsplash URLs with your own project photos -->
+                <div class="gallery-item">
+                    <img src="lawn-mowing.png" alt="Freshly mowed lawn">
+                    <div class="gallery-caption">Freshly Mowed Lawn</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://www.maramani.com/cdn/shop/articles/shutterstock_3122138.jpg?v=1694410302&width=1000"
+                        alt="Custom landscape design">
+                    <div class="gallery-caption">Custom Landscape Design</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://www.topchoiceaustin.com/wp-content/uploads/WhatsApp-Image-2023-04-19-at-2.53.17-PM-1-720x540.jpeg"
+                        alt="Mulch installation">
+                    <div class="gallery-caption">Mulch Installation</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.ctfassets.net/vwt5n1ljn95x/TZWxHeSCgplLaNrpzc9uX/5c094fcda4053b1fc19f20ededaa9814/Branch_Hedge_Trimming.jpeg?w=640&q=75&fm=webp"
+                        alt="Professional tree trimming">
+                    <div class="gallery-caption">Professional Tree Trimming</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://ambrosiolandscapes.com/wp-content/uploads/2021/09/9.29-4.jpg"
+                        alt="Seasonal yard cleanup">
+                    <div class="gallery-caption">Seasonal Yard Cleanup</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.ctfassets.net/zma7thmmcinb/7ImOo5J2qqf1XZz3l4kEGK/d9d366127b275967ed6032a63a395770/raised-garden-bed-lead.jpg"
+                        alt="Beautiful garden beds">
+                    <div class="gallery-caption">Beautiful Garden Beds</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://www.jclandscapingllc.com/wp-content/uploads/2019/08/lawn-aerating-with-aerator-1024x633.jpg"
+                        alt="Lawn aeration service">
+                    <div class="gallery-caption">Lawn Aeration Service</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
+                        alt="Landscape maintenance">
+                    <div class="gallery-caption">Landscape Maintenance</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?w=600&q=80"
+                        alt="Garden design">
+                    <div class="gallery-caption">Garden Design</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1587502537147-2ba64a117a3a?w=600&q=80"
+                        alt="Yard transformation">
+                    <div class="gallery-caption">Yard Transformation</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?w=600&q=80"
+                        alt="Professional edging">
+                    <div class="gallery-caption">Professional Edging</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1592419044706-39796d40f98c?w=600&q=80"
+                        alt="Complete lawn care">
+                    <div class="gallery-caption">Complete Lawn Care</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"GS Lawn Services has been taking care of our yard for two years now.
+                        They're always on time, professional, and do an amazing job. Our lawn has never looked better!"
+                    </p>
+                    <p class="testimonial-author">— Sarah M., Homeowner</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"I needed a complete landscape redesign and GS delivered beyond my
+                        expectations. The team was creative, efficient, and stayed within budget. Highly recommend!"</p>
+                    <p class="testimonial-author">— James T., Property Manager</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Reliable, affordable, and excellent quality. They transformed my
+                        overgrown yard into a beautiful outdoor space. The free estimate was accurate and there were no
+                        surprises."</p>
+                    <p class="testimonial-author">— Maria G., Homeowner</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Best lawn service we've ever used. They pay attention to every detail
+                        and truly care about customer satisfaction. Our neighbors have been asking who does our lawn!"
+                    </p>
+                    <p class="testimonial-author">— Robert K., Homeowner</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Professional from start to finish. The mulch installation looks
+                        fantastic and has really enhanced our curb appeal. Fair pricing and great communication
+                        throughout."</p>
+                    <p class="testimonial-author">— Linda S., Homeowner</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"We use GS for our commercial property and couldn't be happier. They're
+                        dependable, thorough, and always leave the grounds looking pristine. True professionals!"</p>
+                    <p class="testimonial-author">— David P., Business Owner</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section id="service-areas" class="service-areas">
+        <div class="container">
+            <h2 class="section-title">Areas We Serve</h2>
+            <ul class="areas-list">
+                <li>Downtown Indianapolis</li>
+                <li>Broad Ripple</li>
+                <li>Carmel</li>
+                <li>Fishers</li>
+                <li>Noblesville</li>
+                <li>Westfield</li>
+                <li>Zionsville</li>
+                <li>Greenwood</li>
+                <li>Plainfield</li>
+                <li>Avon</li>
+                <li>Brownsburg</li>
+                <li>Lawrence</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About GS Lawn Services</h2>
+            <div class="about-content">
+                <p>For over a decade, GS Lawn Services has been the trusted name in professional lawn care and
+                    landscaping throughout the greater Indianapolis area. What started as a small family operation has
+                    grown into a full-service landscaping company, but we've never forgotten our roots.</p>
+                <p>We believe that every property deserves to look its best, and we're committed to delivering
+                    exceptional results at fair prices. Our experienced team takes pride in transforming ordinary yards
+                    into beautiful outdoor spaces that homeowners and businesses can enjoy year-round.</p>
+                <p>Whether you need regular lawn maintenance, a complete landscape redesign, or seasonal cleanup
+                    services, we bring the same level of dedication and attention to detail to every job. Your
+                    satisfaction is our success, and we won't rest until your outdoor space exceeds your expectations.
+                </p>
+                <p><strong>Let us help you create the yard you've always wanted. Contact us today for your free
+                        estimate!</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do you offer free estimates?
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We provide free, no-obligation estimates for all our services. Simply contact us by
+                            phone at (317) 363-3145 or through our contact form, and we'll schedule a convenient time to
+                            assess your property and provide a detailed quote.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How often should I have my lawn mowed?
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We typically recommend weekly mowing during the growing season (spring and summer) to
+                            maintain optimal lawn health and appearance. During slower growth periods, bi-weekly service
+                            may be sufficient. We'll work with you to create a schedule that fits your lawn's needs and
+                            your budget.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What areas do you service?
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We proudly serve the entire greater Indianapolis area, including Carmel, Fishers,
+                            Noblesville, Westfield, Zionsville, Greenwood, Plainfield, Avon, Brownsburg, and surrounding
+                            communities. If you're unsure whether we service your area, please give us a call and we'll
+                            be happy to confirm.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Are you insured and licensed?
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. GS Lawn Services is fully licensed and insured for your protection and peace of
+                            mind. We carry comprehensive liability insurance and workers' compensation coverage.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What payment methods do you accept?
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We accept cash, checks, and all major credit cards for your convenience. For recurring
+                            services, we also offer automatic billing options to make payment even easier.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What if I'm not satisfied with the service?
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Your satisfaction is our top priority. If you're not completely happy with our work, please
+                            let us know immediately and we'll make it right. We stand behind our services 100%.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get Your Free Estimate Today</h2>
+            <div class="contact-wrapper">
+                <div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Needed *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service...</option>
+                                <option value="lawn-mowing">Lawn Mowing</option>
+                                <option value="landscaping">Landscaping Design</option>
+                                <option value="mulch">Mulch & Rock Installation</option>
+                                <option value="trimming">Bush/Tree Trimming</option>
+                                <option value="leaf-cleanup">Leaf Cleanup</option>
+                                <option value="seasonal">Seasonal Cleanup</option>
+                                <option value="aeration">Aeration & Seeding</option>
+                                <option value="other">Other/Multiple Services</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message"></textarea>
+                        </div>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                            <button type="submit" class="btn btn-primary" style="flex: 1; min-width: 200px;">Send via
+                                WhatsApp</button>
+                            <button type="button" class="btn btn-secondary" id="emailBtn"
+                                style="flex: 1; min-width: 200px;">Send via Email</button>
+                        </div>
+                        <div class="success-message" id="successMessage">
+                            Thank you! We've received your request and will contact you within 24 hours.
+                        </div>
+                    </form>
+                </div>
+                <div class="map-placeholder">
+                    <!-- GOOGLE MAPS EMBED: Replace this entire div with your Google Maps iframe embed code -->
+                    <!-- Example format:
+                    <iframe 
+                        src="YOUR_GOOGLE_MAPS_EMBED_URL_HERE" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0; border-radius: 10px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    -->
+                    <div>
+                        <p style="font-size: 18px; margin-bottom: 10px;">📍 <strong>Service Location</strong></p>
+                        <p>Greater Indianapolis Area</p>
+                        <p style="margin-top: 15px; font-size: 14px; color: #999;">Replace this placeholder with your
+                            Google Maps embed code</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="https://drive.google.com/uc?export=view&id=1KYxVNNVMTzgjvlhjdl0TU3XnYSugbZ_i"
+                    alt="GS Lawn Services Logo" class="footer-logo">
+                <h3>GS Lawn Services</h3>
+                <p>Professional lawn care and landscaping services you can trust.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook">📘</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#why-choose">Why Choose Us</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#services">Lawn Mowing</a></li>
+                    <li><a href="#services">Landscaping Design</a></li>
+                    <li><a href="#services">Mulch Installation</a></li>
+                    <li><a href="#services">Tree Trimming</a></li>
+                    <li><a href="#services">Seasonal Cleanup</a></li>
+                    <li><a href="#services">Aeration & Seeding</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>📞 <a href="tel:+13173633145" style="color: white; text-decoration: none;">(317) 363-3145</a></p>
+                <p>✉️ gslawncarellc.1980@gmail.com</p>
+                <p>📍 Serving Greater Indianapolis Area</p>
+                <p>🕒 Mon-Fri: 8AM-6PM<br>Sat: 9AM-3PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 GS Lawn Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Call Button (Mobile) -->
+    <a href="tel:+13173633145" class="floating-call-btn">📞 Call Now</a>
+
+    <!-- Quote Modal -->
+    <div class="modal" id="quoteModal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2 style="color: var(--primary-green); margin-bottom: 20px;">Get Your Free Quote</h2>
+            <form class="contact-form" id="quoteForm">
+                <div class="form-group">
+                    <label for="quote-name">Full Name *</label>
+                    <input type="text" id="quote-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="quote-phone">Phone Number *</label>
+                    <input type="tel" id="quote-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="quote-email">Email Address *</label>
+                    <input type="email" id="quote-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="quote-service">Service Needed *</label>
+                    <select id="quote-service" required>
+                        <option value="">Select a service...</option>
+                        <option value="lawn-mowing">Lawn Mowing</option>
+                        <option value="landscaping">Landscaping Design</option>
+                        <option value="mulch">Mulch & Rock Installation</option>
+                        <option value="trimming">Bush/Tree Trimming</option>
+                        <option value="leaf-cleanup">Leaf Cleanup</option>
+                        <option value="seasonal">Seasonal Cleanup</option>
+                        <option value="aeration">Aeration & Seeding</option>
+                        <option value="other">Other/Multiple Services</option>
+                    </select>
+                </div>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <button type="submit" class="btn btn-primary" style="flex: 1; min-width: 180px;">Send via
+                        WhatsApp</button>
+                    <button type="button" class="btn btn-secondary" id="emailQuoteBtn"
+                        style="flex: 1; min-width: 180px;">Send via Email</button>
+                </div>
+                <div class="success-message" id="quoteSuccessMessage">
+                    Thank you! We'll contact you soon with your free quote.
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const isActive = answer.classList.contains('active');
+
+                // Close all answers
+                document.querySelectorAll('.faq-answer').forEach(ans => {
+                    ans.classList.remove('active');
+                });
+
+                // Toggle current answer
+                if (!isActive) {
+                    answer.classList.add('active');
+                    button.querySelector('span').textContent = '−';
+                } else {
+                    button.querySelector('span').textContent = '+';
+                }
+
+                // Reset all buttons
+                document.querySelectorAll('.faq-question span').forEach(span => {
+                    if (span !== button.querySelector('span')) {
+                        span.textContent = '+';
+                    }
+                });
+            });
+        });
+
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+
+            if (name && phone && email && service) {
+                // Create WhatsApp message
+                const whatsappMessage = `*New Contact Form Submission*%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Email:* ${encodeURIComponent(email)}%0A*Service Needed:* ${encodeURIComponent(service)}%0A*Message:* ${encodeURIComponent(message || 'N/A')}`;
+
+                // Open WhatsApp with pre-filled message
+                window.open(`https://wa.me/13173633145?text=${whatsappMessage}`, '_blank');
+
+                // Show success message and reset form
+                document.getElementById('successMessage').classList.add('show');
+                document.getElementById('contactForm').reset();
+
+                setTimeout(() => {
+                    document.getElementById('successMessage').classList.remove('show');
+                }, 5000);
+            }
+        });
+
+        // Email button for contact form
+        document.getElementById('emailBtn').addEventListener('click', () => {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+
+            if (name && phone && email && service) {
+                const subject = encodeURIComponent('New Contact Form Submission - GS Lawn Services');
+                const body = encodeURIComponent(`Name: ${name}\\nPhone: ${phone}\\nEmail: ${email}\\nService Needed: ${service}\\nMessage: ${message || 'N/A'}`);
+
+                window.location.href = `mailto:gslawncarellc.1980@gmail.com?subject=${subject}&body=${body}`;
+
+                document.getElementById('successMessage').classList.add('show');
+                document.getElementById('contactForm').reset();
+
+                setTimeout(() => {
+                    document.getElementById('successMessage').classList.remove('show');
+                }, 5000);
+            } else {
+                alert('Please fill in all required fields.');
+            }
+        });
+
+        // Quote modal
+        const modal = document.getElementById('quoteModal');
+        const quoteBtns = document.querySelectorAll('.quote-btn');
+        const closeBtn = document.querySelector('.modal-close');
+
+        quoteBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                modal.classList.add('show');
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.classList.remove('show');
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('show');
+            }
+        });
+
+        // Quote form submission
+        document.getElementById('quoteForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('quote-name').value;
+            const phone = document.getElementById('quote-phone').value;
+            const email = document.getElementById('quote-email').value;
+            const service = document.getElementById('quote-service').value;
+
+            if (name && phone && email && service) {
+                // Create WhatsApp message
+                const whatsappMessage = `*Free Quote Request*%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Email:* ${encodeURIComponent(email)}%0A*Service Needed:* ${encodeURIComponent(service)}`;
+
+                // Open WhatsApp with pre-filled message
+                window.open(`https://wa.me/13173633145?text=${whatsappMessage}`, '_blank');
+
+                // Show success message and reset form
+                document.getElementById('quoteSuccessMessage').classList.add('show');
+                document.getElementById('quoteForm').reset();
+
+                setTimeout(() => {
+                    document.getElementById('quoteSuccessMessage').classList.remove('show');
+                    modal.classList.remove('show');
+                }, 3000);
+            }
+        });
+
+        // Email button for quote form
+        document.getElementById('emailQuoteBtn').addEventListener('click', () => {
+            const name = document.getElementById('quote-name').value;
+            const phone = document.getElementById('quote-phone').value;
+            const email = document.getElementById('quote-email').value;
+            const service = document.getElementById('quote-service').value;
+
+            if (name && phone && email && service) {
+                const subject = encodeURIComponent('Free Quote Request - GS Lawn Services');
+                const body = encodeURIComponent(`Name: ${name}\\nPhone: ${phone}\\nEmail: ${email}\\nService Needed: ${service}`);
+
+                window.location.href = `mailto:gslawncarellc.1980@gmail.com?subject=${subject}&body=${body}`;
+
+                document.getElementById('quoteSuccessMessage').classList.add('show');
+                document.getElementById('quoteForm').reset();
+
+                setTimeout(() => {
+                    document.getElementById('quoteSuccessMessage').classList.remove('show');
+                    modal.classList.remove('show');
+                }, 3000);
+            } else {
+                alert('Please fill in all required fields.');
+            }
+        });
+
+        // Floating call button visibility on mobile
+        if (window.innerWidth <= 768) {
+            document.querySelector('.floating-call-btn').style.display = 'block';
+        }
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth <= 768) {
+                document.querySelector('.floating-call-btn').style.display = 'block';
+            } else {
+                document.querySelector('.floating-call-btn').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
