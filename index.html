@@ -37,7 +37,10 @@
 
         :root {
             --primary-green: #2d5016;
-            --accent-green: #4a7c2c;
+            --accent-green: #39ff14;
+            /* Phosphorescent Green / Neon Green */
+            --hover-green: #32cd32;
+            /* Slightly darker lime for hover states */
             --light-green: #7fb069;
             --cream: #f4f1e8;
             --dark-gray: #2c2c2c;
@@ -212,12 +215,15 @@
         }
 
         .btn-primary {
-            background: var(--light-green);
-            color: var(--white);
+            background: var(--accent-green);
+            color: var(--dark-gray);
+            /* Dark text for contrast on neon green */
+            box-shadow: 0 4px 15px rgba(57, 255, 20, 0.4);
+            /* Neon glow effect */
         }
 
         .btn-primary:hover {
-            background: var(--accent-green);
+            background: var(--hover-green);
             transform: translateY(-2px);
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
         }
@@ -305,9 +311,18 @@
         }
 
         .benefit-icon {
-            font-size: 36px;
+            font-size: 32px;
             color: var(--accent-green);
             flex-shrink: 0;
+            background: rgba(57, 255, 20, 0.1);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--accent-green);
+            box-shadow: 0 0 10px rgba(57, 255, 20, 0.3);
         }
 
         .gallery-grid {
@@ -752,9 +767,9 @@
     <header>
         <nav>
             <a href="#" class="logo-container">
-                <img src="https://drive.google.com/uc?export=view&id=1KYxVNNVMTzgjvlhjdl0TU3XnYSugbZ_i"
+                <img src="https://i.pinimg.com/736x/40/89/09/4089092ac32cb28f5ff7576cc144f08e.jpg"
                     alt="GS Lawn Services Logo" class="logo-img">
-                <span class="logo-text">GS Lawn Services</span>
+                <span class="logo-text">Lawn Services and Landscaping</span>
             </a>
             <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
             <ul class="nav-links">
@@ -943,7 +958,7 @@
                     <div class="gallery-caption">Lawn Aeration Service</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
+                    <img src="https://i.pinimg.com/1200x/7f/37/c9/7f37c9685952f0477ef66b0332f21b6a.jpg"
                         alt="Landscape maintenance">
                     <div class="gallery-caption">Landscape Maintenance</div>
                 </div>
@@ -1206,9 +1221,9 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <img src="https://drive.google.com/uc?export=view&id=1KYxVNNVMTzgjvlhjdl0TU3XnYSugbZ_i"
+                <img src="https://i.pinimg.com/736x/40/89/09/4089092ac32cb28f5ff7576cc144f08e.jpg"
                     alt="GS Lawn Services Logo" class="footer-logo">
-                <h3>GS Lawn Services</h3>
+                <h3>Lawn Services and Landscaping</h3>
                 <p>Professional lawn care and landscaping services you can trust.</p>
                 <div class="social-icons">
                     <a href="#" aria-label="Facebook">📘</a>
