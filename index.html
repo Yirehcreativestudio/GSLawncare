@@ -616,20 +616,41 @@
             color: #666;
         }
 
-        .floating-call-btn {
+        .floating-actions {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background: var(--accent-green);
-            color: var(--white);
-            padding: 15px 25px;
+            display: none;
+            /* Hidden by default, toggled by JS on mobile */
+            flex-direction: column-reverse;
+            gap: 10px;
+            z-index: 999;
+        }
+
+        .floating-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
+            color: var(--white);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            z-index: 999;
-            display: none;
-            animation: pulse 2s infinite;
+            transition: transform 0.3s;
+        }
+
+        .floating-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-call {
+            background: var(--accent-green);
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            /* WhatsApp Brand Color */
         }
 
         .modal {
@@ -1283,7 +1304,11 @@
     </footer>
 
     <!-- Floating Call Button (Mobile) -->
-    <a href="tel:+13173633145" class="floating-call-btn">📞 Call Now</a>
+    <!-- Floating Actions (Mobile) -->
+    <div class="floating-actions">
+        <a href="tel:+13173633145" class="floating-btn btn-call">📞 Call Now</a>
+        <a href="https://wa.me/13173633145" class="floating-btn btn-whatsapp" target="_blank">💬 WhatsApp</a>
+    </div>
 
     <!-- Quote Modal -->
     <div class="modal" id="quoteModal">
@@ -1501,17 +1526,21 @@
         });
 
         // Floating call button visibility on mobile
-        if (window.innerWidth <= 768) {
-            document.querySelector('.floating-call-btn').style.display = 'block';
+        // Floating actions visibility on mobile
+        function toggleFloatingActions() {
+            const actions = document.querySelector('.floating-actions');
+            if (window.innerWidth <= 768) {
+                actions.style.display = 'flex';
+            } else {
+                actions.style.display = 'none';
+            }
         }
 
-        window.addEventListener('resize', () => {
-            if (window.innerWidth <= 768) {
-                document.querySelector('.floating-call-btn').style.display = 'block';
-            } else {
-                document.querySelector('.floating-call-btn').style.display = 'none';
-            }
-        });
+        // Initial check
+        toggleFloatingActions();
+
+        // Check on resize
+        window.addEventListener('resize', toggleFloatingActions);
     </script>
     <script>
         // Prevent right-click on images to protect source
